@@ -36,7 +36,7 @@ class UserMessage(models.Model):
 
 
 # 用户评论TABLE
-class UserComments(models.Model):
+class CourseComments(models.Model):
     user = models.ForeignKey(UserProfile, verbose_name='用户', on_delete=models.CASCADE)
     course = models.ForeignKey(Course, verbose_name='课程', on_delete=models.CASCADE)
     comments = models.CharField('评论', max_length=200)

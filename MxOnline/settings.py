@@ -32,6 +32,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# SMTP配置
+EMAIL_HOST = "smtp.126.com"
+EMAIL_PORT = 25
+EMAIL_HOST_USER = "wolfking816@126.com"
+EMAIL_HOST_PASSWORD = "maqing816816"
+EMAIL_USE_TLS = True
+EMAIL_FROM = "wolfking816@126.com"
+
 
 # Application definition
 # 注册app
@@ -48,7 +56,8 @@ INSTALLED_APPS = [
     'organization',
     'operation',
     'xadmin',
-    'crispy_forms'
+    'crispy_forms',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -84,6 +93,12 @@ WSGI_APPLICATION = 'MxOnline.wsgi.application'
 
 # 由于复写了user模型，我们需要重载AUTH_USER_MODEL参数，导入我们复写后的模型
 AUTH_USER_MODEL = 'users.UserProfile'
+
+
+# 认证后台，用户登陆的认证方法，在views中定义
+AUTHENTICATION_BACKENDS = (
+    'users.views.CustomBackend',
+)
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases

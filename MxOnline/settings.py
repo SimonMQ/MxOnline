@@ -32,13 +32,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# SMTP配置
-EMAIL_HOST = "smtp.126.com"
+# SMTP配置，简单邮件传输协议
+EMAIL_HOST = "smtp.qq.com"
 EMAIL_PORT = 25
-EMAIL_HOST_USER = "wolfking816@126.com"
-EMAIL_HOST_PASSWORD = "maqing816816"
+EMAIL_HOST_USER = "352830021@qq.com"
+# 授权码
+EMAIL_HOST_PASSWORD = "joksxbrghdjobifd"
 EMAIL_USE_TLS = True
-EMAIL_FROM = "wolfking816@126.com"
+EMAIL_FROM = "352830021@qq.com"
 
 
 # Application definition

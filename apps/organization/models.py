@@ -42,6 +42,14 @@ class CourseOrg(models.Model):
         verbose_name = '课程机构'
         verbose_name_plural = verbose_name
 
+    # # 获取该机构的课程数目
+    # def get_course_nums(self):
+    #     return self.course_set.all().count()
+
+    # 获取该机构的教师数目
+    def get_teacher_nums(self):
+        return self.teacher_set.all().count()
+
     def __str__(self):
         return self.name
 
@@ -50,6 +58,7 @@ class CourseOrg(models.Model):
 class Teacher(models.Model):
     org = models.ForeignKey(CourseOrg, verbose_name='所属机构', on_delete=models.CASCADE)
     name = models.CharField('教师名', max_length=50)
+    age = models.IntegerField('年龄', default=0)
     image = models.ImageField('头像', upload_to='teacher/%Y/%m', max_length=100, default='')
     work_years = models.IntegerField('工作年限', default=0)
     work_company = models.CharField('就职公司', max_length=50)

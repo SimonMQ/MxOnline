@@ -37,7 +37,7 @@ EMAIL_HOST = "smtp.qq.com"
 EMAIL_PORT = 25
 EMAIL_HOST_USER = "352830021@qq.com"
 # 授权码
-EMAIL_HOST_PASSWORD = "joksxbrghdjobifd"
+EMAIL_HOST_PASSWORD = "joksxbrghxxxxxxx"
 EMAIL_USE_TLS = True
 EMAIL_FROM = "352830021@qq.com"
 
